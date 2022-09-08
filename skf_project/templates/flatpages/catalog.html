@@ -1,13 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ flatpage.title }}</title>
-</head>
-<body>
-<i>
+{% extends "flatpages/default.html" %}
+{% block menu %}
+    <li class="nav-item"><a class="nav-link" href="#!">Домой</a></li>
+    <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Каталог</a></li>
+    <li class="nav-item"><a class="nav-link" href="#!">О нас</a></li>
+{% endblock menu %}
+
+{% block header %}
+{% include "flatpages/header.html" %}
+{% endblock header %}
+
+{% block content %}
 <h3>Каталог продукции:</h3>
 {{ flatpage.content }}
-</i>
-</body>
-</html>
+{% endblock content %}
